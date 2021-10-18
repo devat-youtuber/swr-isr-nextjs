@@ -1,0 +1,59 @@
+header {
+  background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
+}
+
+header .nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100px;
+}
+
+header form{
+  height: 40px;
+  margin: 10px 0;
+}
+
+header form input,
+header form button{
+  height: 100%;
+  border: 1px solid #0004;
+  outline: none;
+  padding: 0 10px;
+  margin: 0 3px;
+  background: transparent;
+  cursor: pointer;
+}
+
+header .row{
+  display: flex;
+  color: palevioletred;
+  margin: 10px 0;
+}
+
+header .row .prev, 
+header .row .next {
+  width: 45px;
+  height: 45px;
+  background: transparent;
+  border: 1px solid #0004;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+header .row span{
+  height: 45px;
+  line-height: 45px;
+  font-size: larger;
+  font-weight: 600;
+}
+
+header .row .prev:hover, 
+header .row .next:hover{
+  color: white;
+  transition: 0.5s ease-out;
+}
+
