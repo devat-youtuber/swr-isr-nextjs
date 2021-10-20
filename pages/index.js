@@ -1,26 +1,9 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
 import Head from 'next/head'
-
 import Page from '../components/Page'
 
 
 export default function Home() {
-  const [users, setUsers] = useState([])
-  const [loading, setLoading] = useState([])
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true)
-      const res = await axios.get('/users?_sort=createdAt&_order=desc')
-      setUsers(res.data)
-      setLoading(false)
-    }
-
-    fetchData()
-  },[])
-
-  if(loading) return <h2>Loading....</h2>
   return (
     <div>
       <Head>
@@ -30,7 +13,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <Page users={users} />
+        <Page />
       </main>
     </div>
   )
