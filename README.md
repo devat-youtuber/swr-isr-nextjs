@@ -6,7 +6,7 @@
   2. SWR is React Hooks for Data Fetching ( Run on Client-Side ) - 07:12
     + Install SWR
 
-  3. Data Fetching - 13:56
+  3. Data Fetching using SWR - 13:56
 
   4. Using Global Configuration - 23:04
 
