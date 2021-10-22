@@ -6,8 +6,8 @@ import Loading from './Loading'
 import { useUsers } from '../actions/users'
 
 
-const Page = () => {
-  const { users, isLoading, isError } = useUsers()
+const Page = ({page, limit, search}) => {
+  const { users, isLoading, isError } = useUsers(page, limit, search)
 
   if(isError) return <h2>{isError}</h2>;
 
