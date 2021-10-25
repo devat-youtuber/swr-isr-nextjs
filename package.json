@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "json-server": "json-server -d 2000 -p 5000 --watch db.json"
+    "json-server": "json-server -d 1000 -p 5000 --watch db.json"
   },
   "dependencies": {
     "axios": "^0.23.0",

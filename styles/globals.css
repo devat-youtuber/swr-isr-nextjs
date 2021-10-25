@@ -23,6 +23,8 @@ a {
 
 @import url('./card.css');
 
+@import url('./userInput.css');
+
 :disabled{
   transition: 1s ease-in;
   opacity: 0.3;

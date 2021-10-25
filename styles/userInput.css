@@ -1,0 +1,48 @@
+.user_input_container{
+  background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
+}
+
+.user_input{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.user_input .input-group{
+  min-width: 270px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  margin-right: 5px;
+}
+
+.input-group label{
+  margin-right: 5px;
+  font-size: larger;
+  font-weight: 400;
+}
+
+.input-group input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #0004;
+  outline: none;
+  background: transparent;
+}
+
+.user_input button{
+  padding: 10px 25px;
+  background: transparent;
+  border: 1px solid #0004;
+  outline: none;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.user_input button:hover{
+  color: white;
+  transition: 0.5s ease-out;
+}

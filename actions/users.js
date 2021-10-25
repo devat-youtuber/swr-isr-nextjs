@@ -9,12 +9,13 @@ export function useUsers(page, limit, search) {
     url = `${url}&_page=${page}&_limit=${limit}`
   }
 
-  const { data, error } = useSWR(url)
+  const { data, error, mutate } = useSWR(url)
 
   return {
     users: data,
     isLoading: !error && !data,
-    isError: error
+    isError: error,
+    mutate
   }
 }
 

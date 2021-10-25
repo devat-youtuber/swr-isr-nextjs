@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Card from './Card'
 import Loading from './Loading'
@@ -6,17 +6,26 @@ import Loading from './Loading'
 import { useUsers } from '../actions/users'
 
 
-const Page = ({page, limit, search}) => {
+const Page = ({initUsers, page, limit, search}) => {
+  const [data, setData] = useState(initUsers)
+  const [isSwr, setIsSWR] = useState(false)
   const { users, isLoading, isError } = useUsers(page, limit, search)
 
-  if(isError) return <h2>{isError}</h2>;
+  useEffect(() => {
+    if(users){
+      setData(users)
+      setIsSWR(true)
+    }
+  },[users])
 
-  if(isLoading) return <Loading />;
+  if(isSwr && isError) return <h2>{isError}</h2>;
+
+  if(isSwr && isLoading) return <Loading />;
   
   return (
     <div className='card_container'>
       {
-        users?.map(user => (
+        data?.map(user => (
           <Card key={user.id} user={user} />
         ))
       }
